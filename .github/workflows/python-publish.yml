@@ -3,7 +3,7 @@ name: 每天早晚检测有没有游戏消息
 on:
   push:
   schedule:
-    - cron: "0 9,17 * * *"
+    - cron: "0 */10 * * *"
   watch:
     types: [started]
 jobs:
