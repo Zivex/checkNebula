@@ -3,7 +3,7 @@ name: 检测戴森球联机mod是否更新
 on:
   push:
   schedule:
-    - cron: "0 */10 * * *"
+    - cron: "0/10 * * * *"
   watch:
     types: [started]
 jobs:
