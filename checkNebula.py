@@ -14,8 +14,8 @@ import requests
 
 
 sckey = ''
-if "SCKEY" in os.environ:
-    sckey = os.environ["SCKEY"]
+if "SCKEY" in env:
+    sckey = env["SCKEY"]
     print(sckey)
 
 
