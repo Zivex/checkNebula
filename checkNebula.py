@@ -1,6 +1,6 @@
 #-*-coding:utf-8-*-
 import requests
-     
+import os
      
 # 1.Github项目及API接口数据
      
@@ -14,8 +14,8 @@ import requests
 
 
 sckey = ''
-if "SCKEY" in env:
-    sckey = env["SCKEY"]
+if "SCKEY" in os.environ:
+    sckey = os.environ["SCKEY"]
     print(sckey)
 
 
