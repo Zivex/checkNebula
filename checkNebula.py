@@ -13,10 +13,10 @@ import requests
 # req = requests.get(url)
 
 
-sckey = 'SCT111813TEJwbFljIW8ABwvF259571u78'
-# if "SCKEY" in os.environ:
-#     sckey = os.environ["SCKEY"]
-#     print(sckey)
+sckey = ''
+if "SCKEY" in os.environ:
+    sckey = os.environ["SCKEY"]
+    print(sckey)
 
 
 def sendMessage(title, desp):
