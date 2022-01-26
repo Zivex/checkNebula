@@ -1,0 +1,30 @@
+name: 每天早晚检测有没有游戏消息
+
+on:
+  push:
+  schedule:
+    - cron: "0 9,17 * * *"
+  watch:
+    types: [started]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: "Set up Python"
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
+
+      - name: "Install"
+        run: |
+          pip install --upgrade pip
+          pip install requests
+
+
+      - name: "启动脚本..."
+        run: python3 checkNebula.py
+        env:
+          SCKEY: ${{ secrets.SCKEY }}
