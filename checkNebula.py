@@ -1,6 +1,6 @@
 #-*-coding:utf-8-*-
 import requests
-import os
+# import os
      
 # 1.Github项目及API接口数据
      
@@ -13,10 +13,10 @@ import os
 # req = requests.get(url)
 
 
-sckey = ''
-if "SCKEY" in os.environ:
-    sckey = os.environ["SCKEY"]
-    print(sckey)
+sckey = 'SCT111813TEJwbFljIW8ABwvF259571u78'
+# if "SCKEY" in os.environ:
+#     sckey = os.environ["SCKEY"]
+#     print(sckey)
 
 
 def sendMessage(title, desp):
